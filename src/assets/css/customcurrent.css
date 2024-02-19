@@ -1,0 +1,125 @@
+.customWeatherComponent {
+    display: flex;
+    flex-direction: row;
+    border-radius: 20%;
+}
+
+.customWeatherComponent .left {
+    flex: 70%;
+    background-color: #cf5927ca;
+}
+
+.customWeatherComponent .right {
+    flex: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c13e06ca;
+    border-left: 1px solid #f7f5ec;
+}
+
+.textLeft {
+    margin: 0px;
+    padding: 0px 0px 0px 10px;
+    text-align: left;
+}
+
+.textCenter {
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+}
+
+.imageRight {
+    height: 80px;
+    width: 80px;
+}
+
+/*
+** FONT
+*/
+
+.small-p-size {
+    font-size: 8px;
+}
+
+.p-size {
+    font-size: 12px;
+}
+
+.king-size {
+    font-size: 3rem;
+}
+
+/*
+** BOX-MODEL
+*/
+
+.bikini-bottom {
+    border-bottom: 1px solid #f7f5ec;
+}
+
+.right-on-border {
+    border-right: 1px solid #f7f5ec;
+}
+
+.padding-15px {
+    padding: 15px;    
+}
+
+.padding-b-5px {
+    padding-bottom: 5px;
+}
+
+.padding-r-10px {
+    padding-right: 10px;
+}
+
+.padding-l-10px {
+    padding-left: 10px;
+}
+
+.margin-b-5px {
+    margin-bottom: 5px;
+}
+
+/*
+** COLOR
+*/
+
+.primary-color {
+    color: #f7f5ec;
+}
+
+.secondary-color {
+    color: #b33904;
+}
+
+.light-sec-color {
+    color: #b54b1e;
+}
+
+/*
+** BACKGROUND COLOR
+*/
+
+.dark-background {
+    background-color: #c13e0651;
+}
+
+/*
+** IMAGE SIZE
+*/
+
+.img-size {
+    height: 20px;
+    width: 20px;
+}
+
+/*
+** WINDOW
+*/
+
+.overflow-auto {
+   overflow-x: auto;
+}

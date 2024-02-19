@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import { themePalette } from "../../utils/shared_defines";
+import { themePalette } from "../../utility/shared_defines";
 import logo from "../../assets/pics/logo1.png";
 import "../../assets/css/header.css";
 import { IconButton } from "@mui/material";

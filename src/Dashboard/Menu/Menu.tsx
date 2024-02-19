@@ -2,7 +2,7 @@ import { Fragment, ReactElement, ReactNode } from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import { Drawer } from "@mui/material";
 import { drawerWidth } from "../Header/Header";
-import { CONTEXT, themePalette } from "../../utils/shared_defines";
+import { CONTEXT, PATH, themePalette } from "../../utility/shared_defines";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
@@ -17,6 +17,7 @@ import UpdateIcon from "@mui/icons-material/Update";
 import HistoryIcon from "@mui/icons-material/History";
 import SaveAltIcon from "@mui/icons-material/SaveAlt";
 import List from "@mui/material/List";
+import { useNavigate } from "react-router-dom";
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
@@ -46,14 +47,13 @@ enum SECTION {
 interface MenuProps {
   openDrawer: boolean;
   setOpenDrawer: (flag: boolean) => void;
-  setContext: (context: CONTEXT) => void;
 }
 
 export default function Menu(props: MenuProps): ReactElement {
   const open = props.openDrawer;
   const setOpen = props.setOpenDrawer;
-  const setContext = props.setContext;
 
+  const navigate = useNavigate();
   const theme = useTheme();
 
   const handleDrawerClose = () => {
@@ -86,19 +86,19 @@ export default function Menu(props: MenuProps): ReactElement {
   const handleOnClick = (index: INDEX): void => {
     switch (index) {
       case INDEX.INTRO:
-        setContext(CONTEXT.INTRO);
+        navigate(PATH.INTRO);
         break;
       case INDEX.CURRENT:
-        setContext(CONTEXT.CURRENT);
+        navigate(PATH.CURRENT);
         break;
       case INDEX.FORECAST:
-        setContext(CONTEXT.FORECAST);
+        navigate(PATH.FORECAST);
         break;
       case INDEX.HISTORY:
-        setContext(CONTEXT.HISTORY);
+        navigate(PATH.HISTORY);
         break;
       case INDEX.SAVED:
-        setContext(CONTEXT.SAVED);
+        navigate(PATH.SAVED);
         break;
     }
   };

@@ -1,6 +1,6 @@
 ///////////////LOCATION////////////////
 
-interface Location {
+export interface Location {
   name: string;
   region: string;
   country: string;
@@ -31,7 +31,7 @@ export interface CurrentWeatherDTO {
 
 ///////////////FORECAST/////////////////
 
-interface Day {
+export interface Day {
   maxtemp_c: number;
   mintemp_c: number;
   maxwind_mph: number;
@@ -40,18 +40,18 @@ interface Day {
   uv: number;
 }
 
-interface Astro {
+export interface Astro {
   sunrise: string;
   sunset: string;
 }
 
-interface Hour {
+export interface Hour {
   time: string;
   temp_c: number;
   condition: Condition;
 }
 
-interface ForecastDay {
+export interface ForecastDay {
   date: string;
   day: Day;
   astro: Astro;

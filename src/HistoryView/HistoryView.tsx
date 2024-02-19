@@ -1,10 +1,10 @@
-import { Fragment, ReactElement, useEffect, useState } from "react";
-import Header from "./Header/Header";
+import { Fragment, ReactElement, useState } from "react";
+import Header from "../Dashboard/Header/Header";
 import { Box, Toolbar, Container } from "@mui/material";
-import { CONTEXT, getContext } from "../utils/shared_defines";
-import Menu from "./Menu/Menu";
+import Menu from "../Dashboard/Menu/Menu";
 import { styled } from "@mui/material/styles";
-import { drawerWidth } from "./Header/Header";
+import { drawerWidth } from "../Dashboard/Header/Header";
+import History from "./History";
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })<{
   open?: boolean;
@@ -25,18 +25,12 @@ const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })<{
   }),
 }));
 
-export default function Dashboard(): ReactElement {
-  const [context, setContext] = useState(CONTEXT.INTRO);
+export default function HistoryView(): ReactElement {
   const [openDrawer, setOpenDrawer] = useState(false);
-  let contextChild: ReactElement = getContext(context);
 
   const handleDrawerOpen = () => {
     setOpenDrawer(true);
   };
-
-  useEffect(() => {
-    contextChild = getContext(context);
-  }, [context]);
 
   return (
     <Fragment>
@@ -45,7 +39,6 @@ export default function Dashboard(): ReactElement {
         <Menu
           openDrawer={openDrawer}
           setOpenDrawer={setOpenDrawer}
-          setContext={setContext}
         />
         <Main open={openDrawer}>
           <Box
@@ -59,7 +52,7 @@ export default function Dashboard(): ReactElement {
             <Toolbar />
 
             <Container maxWidth="lg" sx={{ mt: 4, mb: 4, overflow: "auto" }}>
-              {contextChild}
+              <History />
             </Container>
           </Box>
         </Main>

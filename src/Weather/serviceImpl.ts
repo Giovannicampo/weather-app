@@ -31,7 +31,7 @@ export class WeatherServiceImpl implements WeatherService {
         ContentType: "application/json",
         "Access-Control-Allow-Headers":
           "accept, content-type, x-requested-with",
-        "Access-Control-Allow-Origin": `${process.env.REACT_APP_WEATHER_BASE_URL}`,
+        "Access-Control-Allow-Origin": `*`,
         "Access-Control-Allow-Methods": "GET",
       },
     };
@@ -41,12 +41,12 @@ export class WeatherServiceImpl implements WeatherService {
     request: CurrentWeatherFilter
   ): Promise<CurrentWeatherDTO> {
     let url: string =
-      process.env.REACT_APP_WEATHER_BASE_URL +
+      `${process.env.REACT_APP_WEATHER_BASE_URL}` +
       `v1` +
       `/current.json?key=${process.env.REACT_APP_API_KEY}` +
       `&q=${request.location}` +
       `&aqi=no`;
-    return axios(this.config(url)).then((response) => response.data);
+      return axios(this.config(url)).then((response) => response.data);
   }
 
   public getForecast(request: ForecastFilter): Promise<ForecastDTO> {

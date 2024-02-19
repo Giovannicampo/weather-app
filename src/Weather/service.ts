@@ -8,6 +8,6 @@ export interface WeatherService {
 }
 
 // factory method for service implementation
-export function NewWeatherServiceImpl(): WeatherService {
+export function NewWeatherService(): WeatherService {
     return new WeatherServiceImpl();
 }
