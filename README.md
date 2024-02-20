@@ -141,7 +141,7 @@ The User Interface has been designed using both user-defined components and MUI 
 
 #### Introduction
 
-![](/home/giovanni/Scrivania/weather-app/pics/intro.png)
+![](pics/intro.png)
 
 It is pretty visible how the main view of the application is made up of three simple components:
 
@@ -197,13 +197,13 @@ CustomCurrentWeather component gets updated any time a change of currentWeatherF
 
 #### Forecast
 
-![](/home/giovanni/Scrivania/weather-app/pics/forecast.png)
+![](pics/forecast.png)
 
 Forecast component is a bit more complex component made up of the current weather one and of boxes representing the following days of the week.
 
 Such as the previous one, it is possible to set a place and the number of days which you want to see the forecast of.
 
-![](/home/giovanni/Scrivania/weather-app/pics/daydialogforecast.png)
+![](pics/daydialogforecast.png)
 
 On click of the box, a forecast dialog of the selected day opens up and shows astronomy data like sunrise and sunset hour, condition and mean temperature per hour and several other data.
 
@@ -211,7 +211,7 @@ On click of the box, a forecast dialog of the selected day opens up and shows as
 
 #### History
 
-![](/home/giovanni/Scrivania/weather-app/pics/history.png)
+![](pics/history.png)
 
 In history page, the date text field compares the string given in input by the user with a regular expression that matches all string with the following format: YYYY-MM-DD.  If the inserted string doesn't match, the call isn't executed.
 
