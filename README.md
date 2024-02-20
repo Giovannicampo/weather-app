@@ -77,7 +77,7 @@ Weather hosts the interfaces and the methods designed for the communication betw
 
 #### Slice
 
-The slice even allows the developer to define different cases depending on the state of the calls.
+The slice even lets the developer define different cases depending on the state of the calls.
 
 Moreover, it's set an initial object called `WeatherState` where there are the three groups of interfaces supposed to manage the state of the receiving data sent by the server:
 
