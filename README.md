@@ -5,7 +5,7 @@ Weather.io is a web application, developed in React and Typescript, that shows w
 
 
 ## Requirements of the app
-The application had to show weather stats by using the following three features: 
+The application had to show weather data by using the following three features: 
 - **Current weather,** a page where the user can view the current weather data of a selected location;
 - **Forecast**, a page that shows forecast for at maximum 7 days of a selected location. 
 - **History**, a page that shows forecast of a selected location in the past;
