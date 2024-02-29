@@ -16,7 +16,7 @@ Furthermore, it is possible to save favourite locations and to view their curren
 
 ## Design
 
-The application has been designed to be user-friendly and easy to maintain and update, so I decided to develop it as a SPA, since its high maintainability and reliability. The software structure is made up of three different components:
+The application has been designed to be user-friendly and easy to maintain and update, therefore I decided to develop it as a SPA. The software structure is mainly made up of three different components:
 
 - a **Router** component, allows navigation between pages and components belonging to the application and synchronises URL path with the User Interface;
 - a **Weather** component, developed by using react-redux library, that makes very easy to manage global states and objects throughout the whole application;
@@ -79,7 +79,7 @@ Weather hosts the interfaces and the methods designed for the communication betw
 
 The slice even lets the developer define different cases depending on the state of the calls.
 
-Moreover, it's set an initial object called `WeatherState` where there are the three groups of interfaces supposed to manage the state of the receiving data sent by the server:
+Moreover, it's set an initial object called `WeatherState` where there are the three groups of interfaces supposed to manage the receiving data sent by the server:
 
 - the responses, described within dto;
 - the statuses, that describe the status of the current API calls;
